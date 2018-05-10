@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700i");
+html {
+  /* box-sizing: border-box; */
+  -ms-overflow-style: scrollbar; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+* {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 0.25rem;
+  background-color: #f2f2f2; }
+
+.column-title {
+  text-transform: uppercase;
+  font-weight: 900; }
+
+.column-card-list {
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px; }
+
+.column {
+  flex-grow: 1;
+  border: 1px solid gray; }
+
+.card {
+  margin: 10px auto;
+  display: flex;
+  min-width: 150px;
+  border: 1px solid beige;
+  background-color: #00CCCC; }
+
+.create-column {
+  margin-bottom: 5px; }
+
+button.create-column,
+button.add-card {
+  background-color: #00CCCC;
+  font-size: 25px;
+  margin-bottom: 15px; }
+
+.btn,
+.btn-delete {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  background-color: #C3C7BB;
+  font-size: 25px; }
+
+.btn-delete {
+  margin-right: 5px; }
+
+.btn:hover,
+.btn-delete:hover {
+  background-color: #00CCCC; }
+
+.card-description {
+  background-color: #00CCCC;
+  color: #CC0033;
+  font-size: 25px; }
+
+.board h1 {
+  background-color: #00CCCC;
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=style.css.map */

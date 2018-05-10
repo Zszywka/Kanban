@@ -1,7 +1,6 @@
 {
   "name": "Kanban",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npm-run-all test:*",
@@ -10,10 +9,7 @@
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md sass/style.scss js/script.js",
-    "init:gitignore": "curl https://raw.githubusercontent.com/DabrowskiCarl/zadanie9.6/master/.gitignore -o .gitignore",
-    "init:index": "curl https://raw.githubusercontent.com/DabrowskiCarl/basic-files/master/index.html -o index.html",
-    "init:js.vend1": "curl https://raw.githubusercontent.com/DabrowskiCarl/basic-files/master/vendor/jquery-3.2.1.min.js -o vendor/jquery-3.2.1.min.js",
-    "init:js.vend2": "curl https://raw.githubusercontent.com/DabrowskiCarl/basic-files/master/vendor/modernizr-3.5.0.min.js -o vendor/modernizr-3.5.0.min.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "build": "npm-run-all build:* test",
     "build:clean": "rimraf -rf css/*",
     "build:sass": "node-sass --output-style compact -o css sass",
@@ -49,5 +45,6 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "underscore": "^1.8.3"
-  }
+  },
+  "description": ""
 }

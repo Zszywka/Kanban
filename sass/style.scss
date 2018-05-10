@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700i');
+$color1: #00CCCC;
+$color2: #C3C7BB;
+$color3: #f2f2f2;
+
+//clearfix
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//grid
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+//general styling
+* {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0.25rem;
+    background-color: $color3;
+}
+.column-title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.column-card-list {
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px;
+}
+
+.column {
+  flex-grow: 1;
+  border: 1px solid gray;
+}
+
+.card {
+  margin: 10px auto;
+  display: flex;
+  min-width: 150px;
+  border: 1px solid beige;
+  background-color: $color1;
+}
+
+.create-column {
+  margin-bottom: 5px;
+}
+button.create-column,
+button.add-card {
+  background-color: $color1;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.btn,
+.btn-delete {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  background-color: $color2;
+  font-size: 25px;
+}
+
+.btn-delete {
+  margin-right: 5px;
+}
+
+.btn:hover,
+.btn-delete:hover {
+  background-color: $color1;
+}
+
+.card-description {
+  background-color: $color1;
+  color: #CC0033;
+  font-size: 25px;
+}
+
+.board h1 {
+  background-color: $color1;
+  text-transform: uppercase;
+}

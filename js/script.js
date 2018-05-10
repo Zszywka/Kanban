@@ -84,7 +84,7 @@ Card.prototype = {
    removeCard: function() {
        this.$element.remove();
    }
-}
+};
 
 // --------------------------------BOARD----------------------------------------
 // table
