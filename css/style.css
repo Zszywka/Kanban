@@ -50,10 +50,12 @@ html {
   border: 1px solid beige;
   background-color: #00CCCC; }
 
-.create-column {
+.create-column,
+.create-board {
   margin-bottom: 5px; }
 
 button.create-column,
+button.create-board,
 button.add-card {
   background-color: #00CCCC;
   font-size: 25px;

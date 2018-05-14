@@ -13,7 +13,7 @@
     var self = this;
 
     this.id = randomString();
-    this.name = name;
+    this.name = name || 'new column';
     this.$element = createColumn();  // this.$element ==> div.column
 
     function createColumn() {
@@ -47,7 +47,7 @@
 // column methods - add card, remove column
 Column.prototype = {
   addCard: function(card) {
-    this.$element.children('ul').append(card.$element); // dlaczego  $element dla obiektu card???
+    this.$element.children('ul').append(card.$element);
   },
   removeColumn: function() {
     this.$element.remove();
@@ -87,7 +87,6 @@ Card.prototype = {
 };
 
 // --------------------------------BOARD----------------------------------------
-// table
 var board = {
   name: 'Kaban',
   addColumn: function(column) {
@@ -112,7 +111,52 @@ $('.create-column').click(function() {
         board.addColumn(column);
 });
 
+function Board(name) {
+  var self = this;
+
+  this.id = randomString();
+  this.name = name || 'new board';
+  this.$element = createBoard();
+
+  function createBoard(name) {
+    var $board = $('<div>').addClass('board');
+    var $boardTitle = $('<h2>').addClass('board-title').text(this.name);
+    var $boardColumnList = $('<div>').addClass('column-container');
+    var $boardAddColumn = $('<button>').addClass('add-column').text('Add a column');
+    var $boardDelete = $('<button>').addClass('btn-delete-board').text('x');
+
+    $boardAddColumn.click(function() {
+      self.addColumn(new Column(prompt('Enter the name of the column')));
+    });
+    $boardDelete.click(function(){
+      self.removeBoard();
+    });
+    $board.append($boardTitle)
+    .append($boardColumnList)
+    .append($boardAddColumn)
+    .append($boardDelete);
+
+    return $board;
+  }
+}
+
+Board.prototype = function(column) {
+  this.$element.append(column.$elemnet);
+  initSortable();
+};
+
+Board.prototype = {
+  removeBoard: function() {
+    this.$element.remove();
+  },
+  addColumn: function(column) {
+    this.$element.children('div').append(column.$element);
+  }
+};
 // -----------------------------------------------------------------------------
+// create boards
+var board1 = new Board('board1');
+
 // create columns
 var todoColumn = new Column('To do');
 var doingColumn = new Column('Doing');
