@@ -100,7 +100,7 @@ var body = {
   addBoard: function(board) {
     this.$element.append(board.$element);
   },
-  $element: $('<body> #board')
+  $element: $('body #board')
 };
 // drag and drop cards (function for the board) --> function drag'n'drop and method sortable() in jQueryUI
 function initSortable() {
