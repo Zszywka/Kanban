@@ -96,6 +96,12 @@ var board = {
   $element: $('#board .column-container')
 };
 
+var body = {
+  addBoard: function(board) {
+    this.$element.append(board.$element);
+  },
+  $element: $('<body> #board')
+};
 // drag and drop cards (function for the board) --> function drag'n'drop and method sortable() in jQueryUI
 function initSortable() {
  $('.column-card-list').sortable({   //<ul>
@@ -109,6 +115,13 @@ $('.create-column').click(function() {
     var name = prompt('Enter a column name');
     var column = new Column(name);
         board.addColumn(column);
+});
+
+// create board event(on button in HTML)
+$('.create-board').click(function() {
+    var name = prompt('Enter a board name');
+    var board = new Board(name);
+        body.addBoard(board);
 });
 
 function Board(name) {
@@ -155,7 +168,7 @@ Board.prototype = {
 };
 // -----------------------------------------------------------------------------
 // create boards
-var board1 = new Board('board1');
+
 
 // create columns
 var todoColumn = new Column('To do');
